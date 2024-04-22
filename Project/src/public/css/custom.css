@@ -1,0 +1,67 @@
+	
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:"Calibri";
+	font-size: 18px;
+}
+*::after, *::before{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.overflow-twoline-text{
+    width:100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    background:#fff;
+    position:absolute;
+}
+
+/* If text is too long, convert to ... */
+.overflow-text{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*css cua phan autocomplete */
+	.autocomplete-items {
+		position: absolute;
+		border: 1px solid #d4d4d4;
+		border-bottom: none;
+		border-top: none;
+		z-index: 99;
+		/*position the autocomplete items to be the same width as the container:*/
+		top: 100%;
+		left: 0.5px;
+		right: -1px;
+	}
+
+	.autocomplete-items div {
+		padding: 7px;
+		cursor: pointer;
+		background-color: #fff; 
+		border-bottom: 1px solid #d4d4d4; 
+	}
+	
+	
+	.autocomplete-items div:hover {
+		/*when hovering an item:*/
+		background-color: #e9e9e9;
+	}
+
+	/*when navigating through the items using the arrow keys:*/
+	.autocomplete-active {
+		background-color: DodgerBlue !important; 
+		color: #ffffff; 
+	}
+
+		
+
+		
+
+

@@ -1,0 +1,59 @@
+<div id="main" style="min-height:100vh;position:relative">
+        <div id="content">
+            <div class="container container-content" style="min-height:70vh;">
+                <div class="row">
+                    <div class="col-sm-12 col-nguoitimviecdathich">
+                        <div class="col-sm-12 format-text-heading">
+                            <h4>Công việc đã thích</h4>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap" id="wrapSaveCT">
+                        {{#each congviec}}
+                        <div class="offset-sm-auto mx-auto mb-3 col-12 col-sm-10 col-md-5 cards">
+                        <div class="card card-format-border-left">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-12 col-img-text">
+                                        <div class="col-img">
+                                            <span>
+                                                    <img src={{this.congviec.logo}} width="60" height="50" fill="url(#pattern)" />
+                                            </span>
+                                        </div>
+                                        <div class="col-text">
+                                            <h5 class="card-title format-text-bold">{{this.congviec.name_job}}</h5>
+                                            <h6 class="card-subtitle mb-2">{{this.congviec.tendoanhnghiep}}</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="col-money">
+                                            <span><i class="fa fa-eur" aria-hidden="true"></i></span>
+                                            <p class="card-text p-money">{{this.congviec.salary}}/tháng</p>
+                                        </div>
+                                        <div class="col-time">
+                                            <span><img class="img-time" src="/img/time.jpg" alt=""></span>
+                                            <span class="card-text p-time">{{this.congviec.worktime}}</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+											{{#each this.congviec.skills}}
+											<p class=" p-request">{{this}}</p>
+											{{/each}}
+									</div>
+                                    <div class="col-sm-8 col-diadiem">
+                                        <span><i class="fa fa-map-marker" aria-hidden="true"></i><span>
+                                                <span class="card-text p-diadiem">{{this.congviec.diachi}}</span>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <p class="card-text p-timeleft">Còn {{this.congviec.timeleft}} ngày</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                    </div>                    
+                </div>
+            </div>
+        </div>
+</div>

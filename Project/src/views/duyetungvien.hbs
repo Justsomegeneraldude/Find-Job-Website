@@ -1,0 +1,206 @@
+{{#if success}}
+<div id="handle-error" class="awn-toast-container1">
+    <div class="awn-toast-wrapper1"><b class="awn-toast-label1">THÔNG BÁO</b>
+      <div class="awn-toast-content1">{{success}}</div>
+    </div>
+</div>
+{{/if}}
+
+
+<div id="content">
+    <div class="container container-content">
+        <div class="row">
+            <div class="col-sm-12 col-duyetungvien">
+                <div class="col-sm-12 format-text-heading">
+                    <h4>DUYỆT ỨNG VIÊN</h4>
+                </div>
+                <div class="table-responsive">
+                    <table id="duyetungvien" class="table align-middle mb-0 bg-white format-table">
+                        <thead class="format-thead-background">
+
+                            <tr class="format-text">
+                                <th class="text-white-50"></th>
+                                <th class="text-white-50">Tên</th>
+                                <th class="text-white-50">Công việc</th>
+                                <th class="text-white-50">Chi tiết</th>
+                                <th class="text-white-50">Duyệt</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            {{#each congviec}}
+                            {{#if this.ketqua}}
+                            {{#if show}}    
+                            <tr class="format-text">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img alt="" src="/img/18-F3.png" style="width: 45px; height: 45px"
+                                            class="rounded-circle" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="fw-normal mb-1">{{this.hoten}}</p>
+                                </td>
+                                <td>{{this.congviec.name_job}}</td>
+                                <td class="format-td">
+                                    <div class="format-td-hoso">
+                                        <a class="format-hoso" role="button"
+                                            href=""
+                                            class="btn btn-link  btn-rounded">
+                                            Xem hồ sơ
+                                        </a>
+                                    </div>
+                                    <div class="format-td-baidang">
+                                        <a class="format-baidang" class="aa" role="button"
+                                            href=""
+                                            ID_BaiDang"]}" class="btn btn-link btn-rounded">
+                                            Xem bài đăng
+                                        </a>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div class="format-btn-dongy">
+                                        <a href="/dn/duyetungvien/{{this.taikhoan}}-{{this.congviec.slug}}" class="btn-dongy"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <span>
+                                                <img class="format-img-done"
+                                                    src="/img/dongy.png" alt="">
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="format-btn-tuchoi" id="format-btn-tuchoi-id">
+                                        <a href="/dn/duyetungvien/tuchoi/{{this.taikhoan}}-{{this.congviec.slug}}" class="btn-tuchoi"
+                                            id="btn-tuchoi-id" aria-haspopup="true" aria-expanded="false">
+                                            <span>
+                                                <img class="format-img-clear"
+                                                    src="/img/tuchoi.png" alt="">
+                                            </span>
+                                        </a>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        {{/if}}
+                        {{/if}}
+                        {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-12 col-duyetungvien">
+                <div class="col-sm-12 format-text-heading">
+                    <h4>ỨNG VIÊN ĐƯỢC GỬI YÊU CẦU TUYỂN DỤNG</h4>
+                </div>
+                <div class="table-responsive">
+                    <table id="yeucautuyendung" class="table align-middle mb-0 bg-white format-table">
+                        <thead class="format-thead-background">
+                            <tr class="format-text">
+                                <th class="text-white-50"></th>
+                                <th class="text-white-50">Tên</th>
+                                <th class="text-white-50">Công việc</th>
+                                <th class="text-white-50">Chi tiết</th>
+                                <th class="text-white-50">Trạng thái</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                                {{#each listEmpl}}
+                            <tr class="format-text">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="/img/18-F3.png" alt=""
+                                            style="width: 45px; height: 45px" class="rounded-circle" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="fw-normal mb-1">{{this.ungvienduocmoi.hoten}}</p>
+                                </td>
+                                <td>{{this.ungvienduocmoi.congviec}}</td>
+                                <td class="format-td">
+                                    <div class="format-td-hoso">
+                                        <a class="format-hoso" role="button" href="/dn/info/ungvien/{{this.slug}}" class="btn btn-link  btn-rounded">
+                                            Xem hồ sơ
+                                        </a>
+                                    </div>
+
+                                </td>
+                                    {{#if choduyet}}
+                                    <td>
+                                        <span class="format-text-dangchoduyet">{{this.trangthai}}</span>
+                                    </td>
+                                    {{/if}}
+
+                                    {{#if dongy}}
+                                    <td>
+                                        <span class="format-text-dadongy">{{this.trangthai}}</span>
+                                    </td>
+                                    {{/if}}
+
+                                    {{#if tuchoi}}
+                                    <td>
+                                        <span class="format-text-datuchoi"> {{this.trangthai}}</span>
+                                    </td>
+                                    {{/if}}
+                            </tr>
+                                {{/each}}
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-12 col-ungviendaduyet">
+                <div class="col-sm-12 format-text-heading">
+                    <h4>ỨNG VIÊN ĐÃ DUYỆT</h4>
+                </div>
+                <div class="table-responsive">
+                    <table id="daduyet" class="table align-middle mb-0 bg-white format-table">
+                        <thead class="format-thead-background">
+                            <tr class="format-text">
+                                <th class="text-white-50"></th>
+                                <th class="text-white-50">Tên</th>
+                                <th class="text-white-50">Công việc</th>
+                                <th class="text-white-50">Chi tiết</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each congviec}}
+                            {{#if this.ketqua}}
+                            {{#unless show}}
+                            <tr class="format-text">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img alt="" src="/img/18-F3.png" style="width: 45px; height: 45px"
+                                            class="rounded-circle" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="fw-normal mb-1">{{this.hoten}}</p>
+                                </td>
+                                <td>{{this.congviec.name_job}}</td>
+                                <td class="format-td">
+                                    <div class="format-td-hoso">
+                                        <a class="format-hoso" role="button"
+                                            href="/dn/info/ungvien/{{this.taikhoan}}"
+                                            class="btn btn-link  btn-rounded">
+                                            Xem hồ sơ
+                                        </a>
+                                    </div>
+                                    <div class="format-td-baidang">
+                                        <a class="format-baidang" class="aa" role="button"
+                                            href="../../../src/Views/admin/pageinfoadmin.php?idbaidang=${data[i]["
+                                            ID_BaiDang"]}" class="btn btn-link btn-rounded">
+                                            Xem bài đăng
+                                        </a>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            {{/unless}}
+                            {{/if}}
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

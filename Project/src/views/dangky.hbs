@@ -1,0 +1,109 @@
+{{#if message}}
+<div id="handle-error" class="awn-toast-container">
+    <div class="awn-toast-wrapper"><b class="awn-toast-label">THÔNG BÁO</b>
+      <div class="awn-toast-content">{{message}}</div>
+    </div>
+</div>
+{{/if}}
+<div class="container-fluid">
+  <div class="bg">
+    <div class="dark-bg"></div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-sm-8 col-xs-12 row-container my-5">
+      <form id="form" action="/auth/dangky/create" method="post" enctype="multipart/form" class="needs-validation" novalidate>
+        <h1 class="text-center"><a style="text-decoration:none;color:white;" href="/">FIND WORK</a>
+        </h1>
+        <h2 class="text-center">Đăng kí</h2>
+        <div class="form-group">
+          <label for="username">Tài khoản</label>
+          <input name="taikhoan" type="text" class="form-control py-2 forTV" id="username" required>
+          <div class="invalid-feedback">Vui lòng nhập tài khoản.</div>
+        </div>
+        <div class="form-group">
+          <label for="password" class="label">Mật khẩu</label>
+          <input name="matkhau" type="password" class="form-control py-2 forTV" id="password" required>
+          <div class="invalid-feedback">Vui lòng nhập mật khẩu.</div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input name="email" type="email" class="form-control py-2 forTV" id="email" required>
+          <div class="invalid-feedback">Vui lòng nhập email.</div>
+        </div>
+        <div class="form-group">
+          <label for="number">Số điện thoại</label>
+          <input name="sdt" type="number" class="form-control py-2 forTV" id="number" required>
+          <div class="invalid-feedback">Vui lòng nhập số điện thoại.</div>
+        </div>
+        <div class="form-group">
+          <label>Bạn là</label>
+          <select class="form-control required" id="select" name="role" required>
+            <option value="TV" style="color:black !important;">Người xin việc</option>
+            <option value="TD" style="color:black !important;">Nhà tuyển dụng</option>
+          </select>
+          <div class="invalid-feedback">Vui lòng chọn.</div>
+        </div>
+        <div class="form-group">
+          <label for="company">Tên doanh nghiệp</label>
+          <input name="tendoanhnghiep" type="text" class="form-control py-2 forTD" id="company" disable>
+          <div class="invalid-feedback">Vui lòng nhập tên doanh nghiệp.</div>
+        </div>
+        <div class="form-group">
+          <label for="address">Địa chỉ</label>
+          <input name="diachi" type="text" class="form-control py-2 forTD" id="address" disable>
+          <div class="invalid-feedback">Vui lòng nhập địa chỉ.</div>
+        </div>
+        <div class="form-group">
+          <label for="website">Website</label>
+          <input name="website" type="text" class="form-control py-2 forTD" id="website" disable>
+          <div class="invalid-feedback">Vui lòng nhập website.</div>
+        </div>
+        <div class="offset-sm-4">
+          <button type="submit" name='dangky' class="mx-auto">Đăng Kí</button>
+        </div>
+        <div class="">
+          <div class="signup_link">Đã có tài khoản? <a href="./dangnhap">Đăng nhập</a>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+  
+   //$("#select").change(function(){
+      //if($(this).val()=="TD"){
+        //let x = $(".forTD")
+        //x.each(function(a,b){
+         // $(b).attr("required", true);
+         // $(b).attr("disable", false);
+       // })
+      //} else {
+       // let x = $(".forTD")
+        //x.each(function(a,b){
+         // $(b).attr("required", false);
+         // $(b).attr("disable", true);
+       // })
+      //}
+    //});
+
+  // Disable form submissions if there are invalid fields //
+  (function () {
+    'use strict';
+    window.addEventListener('load', function () {
+      // Get the forms we want to add validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function (form) {
+        form.addEventListener('submit', function (event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+</script>

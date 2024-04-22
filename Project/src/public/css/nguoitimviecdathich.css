@@ -1,0 +1,9 @@
+.format-text-heading{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.format-text-heading h4{
+    font-weight: 600;
+    text-transform: uppercase;
+}

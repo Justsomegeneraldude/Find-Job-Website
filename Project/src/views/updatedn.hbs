@@ -1,0 +1,99 @@
+{{#if checkTD}}
+<div id="content" class="container-fluid bg">
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-sm-10 row-container my-5">
+            <form method="POST" action="/dn/update/{{userTD._id}}?_method=PUT" id="form" class="needs-validation my-4"
+                novalidate>
+                <input name="updateAdmin" type="hidden">
+                <h1 class="text-center">Cập nhật thông tin doanh nghiệp</h1>
+                <div class="d-sm-flex flex-sm-row">
+                    <div class="form-group col-sm-6">
+                        <label for="name">Tên doanh nghiệp</label>
+                        <input name="tendoanhnghiep" type="text" class="form-control py-3"
+                            value={{userTD.tendoanhnghiep}} placeholder="Nhập tên doanh nghiệp ở đây" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="logo">Logo doanh nghiệp</label>
+                        <input name="logo" type="text" class="form-control py-3" id="logo"
+                            placeholder="Nhập link logo doanh nghiệp" required value={{userTD.logo}}>
+                    </div>
+                </div>
+                <div class="d-sm-flex flex-sm-row">
+                    <div class="form-group col-sm-5">
+                        <label for="linhvuc">Lĩnh vực</label>
+                        <select name="linhvuc" class="form-control" id="linhvuc">
+                            <option value={{userTD.linhvuc}}>{{userTD.linhvuc}}</option>
+                            <option value="Công nghệ thông tin">Công nghệ thông tin</option>
+                            <option value="Viễn thông">Viễn thông</option>
+                            <option value="Marketing / Truyền thông / Quảng cáo">Marketing / Truyền thông / Quảng cáo
+                            </option>
+                            <option value="Nhà hàng / Khách sạn">Nhà hàng / Khách sạn</option>
+                            <option value="Thời trang">Thời trang</option>
+                            <option value="Internet / Online">Internet / Online</option>
+                            <option value="Bất động sản<">Bất động sản</option>
+                            <option value="Dược phẩm / Y tế / Công nghệ sinh học">Dược phẩm / Y tế / Công nghệ sinh học
+                            </option>
+                            <option value="Kế toán / Kiểm toán">Kế toán / Kiểm toán</option>
+                            <option value="Kinh doanh">Kinh doanh</option>
+                            <option value="Giải trí">Giải trí</option>
+                            <option value="Khác">Khác</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-7">
+                        <label for="website">Trang web của công ty</label>
+                        <input name="website" type="text" class="form-control py-3"
+                            placeholder="Nhập trang web của công ty" value={{userTD.website}} required>
+                    </div>
+                </div>
+                <div class="d-sm-flex flex-sm-row">
+                    <div class="form-group col-sm-6">
+                        <label for="number">Số điện thoại</label>
+                        <input name="sdt" type="number" class="form-control py-3" placeholder="Nhập số điện thoại ở đây"
+                            value={{userTD.sdt}} required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="email">Email</label>
+                        <input name="email" type="email" class="form-control py-3" placeholder="Nhập email ở đây"
+                            value={{userTD.email}} required>
+                    </div>
+                </div>
+                <div class="d-sm-flex flex-sm-row">
+                    <div class="form-group col-sm-5">
+                        <label for="tp">Thành phố</label>
+                        <select name="city" class="form-control" required>
+                            <option disabled="disabled">Tỉnh / Thành phố</option>
+                            <option>{{userTD.city}}</option>
+                        </select>
+                        <input class="billing_address_1" name="" type="hidden">
+
+                    </div>
+                    <div class="form-group col-sm-7">
+                        <label for="diachi">Địa chỉ</label>
+                        <input name="diachi" type="text" class="form-control py-3" placeholder="Nhập tên địa chỉ ở đây"
+                            value={{userTD.diachi}} required>
+                    </div>
+                </div>
+                <div class="form-group col-12">
+                    <label for="comment">Giới thiệu doanh nghiệp</label>
+                    <textarea name="description_company" class="form-control" rows="3"
+                        placeholder="Mô tả doanh nghiệp ở đây" required>{{userTD.description_company}} </textarea>
+                </div>
+                <div class="form-group col-12">
+                    <label for="phucloi">Phúc lợi</label>
+                    <textarea name="phucloi" class="form-control" rows="3" placeholder="Mô tả phúc lợi ở đây"
+                        required>{{userTD.phucloi}}</textarea>
+                </div>
+
+                <div class="offset-4">
+                    <button class="btn-update" onMouseOver="this.style.background='rgb(55 55 55)'"
+                        onMouseOut="this.style.background='rgba(0, 0, 0, 0.1)'" type="submit" class="mx-auto">Cập
+                        nhật</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{{/if}}
+<!-- api để lấy dữ liệu tỉnh của việt nam -->
+<script src='https://cdn.jsdelivr.net/gh/vietblogdao/js/districts.min.js'></script>

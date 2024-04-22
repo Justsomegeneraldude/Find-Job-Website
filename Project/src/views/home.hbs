@@ -1,0 +1,12 @@
+{{> content1}}
+{{> content2}}
+{{#if checkTV}}
+{{> content3}}
+{{else}}
+    {{#if checkTD}}
+    {{> content3admin}}
+    {{else}}
+    {{> content3}}
+    {{/if}}
+{{/if}}
+

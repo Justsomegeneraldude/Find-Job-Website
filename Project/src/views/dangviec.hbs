@@ -1,0 +1,120 @@
+<div id="content" class="container-fluid bg">
+    <div class="row justify-content-center">
+      <div class="col-xs-12 col-sm-10 row-container my-5">
+        <form action="/dn/dangviec/create" method="post"  class="needs-validation my-4" novalidate enctype="multipart/form">
+            <input name="dviec" type="hidden">
+            <h1 class="text-center">Đăng việc</h1>
+            <div class="d-sm-flex  flex-sm-row mt-4">
+                <div class="form-group col-sm-4">
+                    <label for="name_job">Tên công việc</label>
+                    <input name="name_job" type="text" class="form-control py-3" id="name_job" placeholder="Nhập tên công việc ở đây" required>
+                </div>
+                 <div class="form-group col-sm-4">
+                    <label for="tendoanhnghiep">Tên doanh nghiệp</label>
+                    <input name="tendoanhnghiep" type="text" class="form-control py-3" id="tendoanhnghiep" placeholder="Nhập tên doanh nghiệp ở đây" value={{tendoanhnghiep}} required>
+                </div>
+                 <div class="form-group col-sm-4">
+                    <label for="logo">Logo doanh nghiệp</label>
+                    <input name="logo" type="text" class="form-control py-3" id="logo" placeholder="Nhập link logo doanh nghiệp" required value = {{logo}}>
+                </div>
+               
+              
+            </div>
+            <div class="d-sm-flex flex-sm-row">
+                  <div class="form-group col-sm-4">
+                    <label for="career">Lĩnh vực</label>
+                    <select name="career" class="form-control" id="career">
+                        <option value="Công nghệ thông tin">Công nghệ thông tin</option>
+                        <option value="Viễn thông">Viễn thông</option>
+                        <option value="Marketing / Truyền thông / Quảng cáo">Marketing / Truyền thông / Quảng cáo</option>
+                        <option value="Nhà hàng / Khách sạn">Nhà hàng / Khách sạn</option>
+                        <option value="Thời trang">Thời trang</option>
+                        <option value="Internet / Online">Internet / Online</option>
+                        <option value="Bất động sản<">Bất động sản</option>
+                        <option value="Dược phẩm / Y tế / Công nghệ sinh học">Dược phẩm / Y tế / Công nghệ sinh học</option>
+                        <option value="Kế toán / Kiểm toán">Kế toán / Kiểm toán</option>
+                        <option value="Kinh doanh">Kinh doanh</option>
+                        <option value="Giải trí" >Giải trí</option>
+                        <option value="Khác">Khác</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-3">
+                    <label for="position">Chức vụ</label>
+                    <input name="position" type="text" class="form-control py-3" id="position" placeholder="Nhập chức vụ ở đây" required>
+                </div>
+                <div class="form-group col-sm-3">
+                    <label for="salary">Lương</label>
+                    <input min="1" max="9999999999" name="salary" type="number" class="form-control py-3" id="salary" placeholder="Nhập lương($) ở đây" required>
+                </div>
+                <div class="form-group col-sm-2">
+                    <label for="loaicv">Loại công việc</label>
+                    <select name="loaicongviec" class="form-control" id="loaicv" required>
+                        <option value="Toàn thời gian">Toàn thời gian</option>
+                        <option value="Bán thời gian">Bán thời gian</option>
+                    </select>                    
+                </div>
+            </div>
+            <div class="d-sm-flex flex-sm-row">
+              <div class="form-group col-6">
+                  <label for="diachi">Địa chỉ</label>
+                  <input name="diachi" type="text" class="form-control py-3" id="diachi" placeholder="Nhập địa chỉ ở đây" required value = {{diachi}}>
+              </div>
+               <div class="form-group col-sm-4">
+                    <label for="degree">Yêu cầu bằng cấp (tối thiểu)</label>
+                    <input name="degree" type="text" class="form-control py-3" id="degree" placeholder="Đại học, cấp 3, chứng chỉ,..." required>
+                </div>
+              <div class="form-group col-2">
+                  <label for="soluongtuyen">Số lượng tuyển dụng</label>
+                  <input name="soluongtuyendung" type="number" class="form-control py-3" id="soluongtuyen" placeholder="1" required>
+              </div>
+            </div>
+            <div class="d-sm-flex flex-sm-row">
+                <div class="form-group col-sm-3">
+                    <label for="sdt">Số điện thoại</label>
+                    <input name="sdt" type="number" class="form-control py-3" id="sdt" placeholder="Nhập số điện thoại ở đây" required value = {{sdt}}>
+                </div>
+                <div class="form-group col-sm-3">
+                    <label for="date">Thời hạn tuyển dụng</label>
+                    <input name="date" type="date" class="form-control py-3" id="duration" required>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="email">Email</label>
+                    <input name="email" type="email" class="form-control py-3" id="email" placeholder="Nhập tên email ở đây"  required value={{email}}>
+                </div>
+            </div>  
+            <div class="form-group col-12">
+                <label for="description">Mô tả công việc</label>
+                <textarea name="description" class="form-control" rows="3" id="description" placeholder="Mỗi dòng mô tả là một mục" required></textarea>
+            </div>
+            <div class="d-sm-flex flex-sm-row">
+              <div class="form-group col-6">
+                  <label for="benefit">Quyền lợi được hưởng</label>
+                  <textarea name="benefit" class="form-control" rows="3" id="benefit" placeholder="Mỗi dòng mô tả là một mục" required></textarea>
+              </div>
+              <div class="col-6">
+                  <label for="job_requirement">Yêu cầu công việc</label>
+                  <textarea name="job_requirement" class="form-control" rows="3" id="job_requirement" placeholder="Mỗi dòng mô tả là một mục" required></textarea>
+              </div>
+            </div>
+            <div class="tag-input form-group col-7">
+                <div class="input">
+                    <label for="tag-ip">Thêm tag kĩ năng</label>
+                    <div class="d-flex flex-row">
+                        <input class="form-control mt-2" type="text" id="tag-ip" placeholder="Hãy nhập ít nhất 2 kĩ năng ( ấn vào dấu cộng bên cạnh để thêm)" required>
+                        <span class="material-icons btn" value="" style="color:gray; font-size: 36px">
+                            add_circle_outline
+                        </span>
+                    </div>
+            
+                </div>
+                <div class="tag-list"></div>
+            </div>
+            <input id="skills" type="hidden" name="skills" value="">
+            <div class="offset-sm-4">
+                <button class="btn-update" onMouseOver="this.style.background='rgb(55 55 55)'"
+                    onMouseOut="this.style.background='rgba(0, 0, 0, 0.1)'" type="submit" class="mx-auto">ĐĂNG VIỆC</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>

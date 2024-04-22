@@ -1,0 +1,85 @@
+{{#if message}}
+<div id="handle-error" class="awn-toast-container">
+    <div class="awn-toast-wrapper"><b class="awn-toast-label">THÔNG BÁO</b>
+      <div class="awn-toast-content">{{message}}</div>
+    </div>
+</div>
+{{/if}}
+{{#if success}}
+<div id="handle-error" class="awn-toast-container1">
+    <div class="awn-toast-wrapper1"><b class="awn-toast-label1">THÔNG BÁO</b>
+      <div class="awn-toast-content1">{{success}}</div>
+    </div>
+</div>
+{{/if}}
+
+<div class="container-fluid">
+  <div class="bg">
+    <div class="dark-bg"></div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-sm-8 col-xs-12 row-container">
+      <form action="/auth/dangnhap" method="post" enctype="multipart/form" class="needs-validation" novalidate>
+        <input type='hidden' name='SignIn' value='true'>
+        <h1 class="text-center"><a style="text-decoration:none;color:white;" href="/">FIND WORK</a>
+        </h1>
+        <h2 class="text-center">Đăng nhập</h2>
+        <div class="form-group">
+          <label for="username">Tài khoản</label>
+          <input name="taikhoan" value='' type="text" class="form-control py-3" id="username"
+            required>
+          <div class="invalid-feedback">Vui lòng nhập tài khoản.</div>
+        </div>
+        <div class="form-group mb-0">
+          <label for="password" class="label">Mật khẩu</label>
+          <input name='matkhau' value='' type="password" class="form-control py-3" id="password"
+            required>
+          <div class="invalid-feedback">Vui lòng nhập mật khẩu.</div>
+        </div>
+        <div class="form-group">
+          <label for="select">Bạn là</label>
+          <select select class="form-control required" id="select" name="role" required>
+            <option value="TV" style="color:black !important;">Người xin việc</option>
+            <option value="TD" style="color:black !important;">Nhà tuyển dụng</option>
+          </select>
+        </div>
+
+        <div class='form-group form-check'>
+          <input type='checkbox' name='remember' value='1' class='form-check-input' id='exampleCheck1'>
+          <label class='form-check-label' for='exampleCheck1'>Remember me</label>
+        </div>
+
+        <div class="pass">
+          <a href="./forget">Quên mật khẩu</a>
+        </div>
+        <div class="offset-sm-4">
+          <button type="submit" class="mx-auto">Đăng nhập</button>
+        </div>
+        <div class="">
+          <div class="signup_link">Bạn chưa có tài khoản? <a href="./dangky">Đăng kí</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+  // Disable form submissions if there are invalid fields
+  (function () {
+    'use strict';
+    window.addEventListener('load', function () {
+      // Get the forms we want to add validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function (form) {
+        form.addEventListener('submit', function (event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+</script>

@@ -1,0 +1,278 @@
+/*css content-2*/
+	/*css content-2 left*/	
+	.card-format-border-left{
+		/* border: 2px solid rgba(0,0,0,.125); */
+		border-radius: 10px;		
+		border-top: 1px solid #fff;
+		border-left: 1px solid #fff;
+		box-shadow: 6px 6px 12px rgb(0 0 0 / 22%);
+	}
+	.p-money{
+		margin-left: 5px;
+		font-size: 18px;
+		display: inline-block;
+	}
+	.col-money{
+		margin-right: 40px;
+	}
+	.col-time, .col-money{
+		display: inline-block;
+	}
+
+	.col-time .img-time{
+		width: 15px;
+		margin-bottom: 5px;
+		font-size: 17px;
+	}
+	.p-time{
+		margin-left:2px;
+		font-size: 18px;
+		display: inline-block;
+	}
+	.p-request{
+		display: inline-block;
+		border: 1px solid #000;
+		margin-right: 8px;
+		margin-top: 5px;
+		font-size: 18px;
+		border-radius: 5px;
+		padding: 0 10px;
+	}
+
+	/* .col-diadiem{
+		position: relative;
+
+	}
+	.col-diadiem .fa-map-marker{
+		position: absolute;
+		top: 5px;
+		bottom: 0px;
+		font-size: 17px;
+	} */	
+	.p-diadiem{
+		margin-left:5px;
+		font-size: 18px;
+		display: inline-block;
+	}
+
+	.p-timeleft{
+		font-size: 18px;
+		font-style: italic;
+		color: #969696
+	}
+
+	.col-mg-content-2-left-main{
+		margin-bottom: 20px;
+	}
+	.col-img-text{
+		display: flex;
+	}
+	.img-company{
+		margin-right: 11px;
+		margin-top: 3px;
+	}
+	/* .col-img img{
+		width: 50px; 
+		height: 50px;
+	} */
+	/* .col-text{
+		margin-left: 20px;
+	} */
+
+	
+	
+	/*css content-2 right*/
+	.col-content2-right{
+		/* border: 2px solid rgba(0,0,0,.125); */
+		border-radius: 10px;
+		border-top: 1px solid rgba(0,0,0,.125);
+		border-left: 1px solid rgba(0,0,0,.125);
+		box-shadow: 6px 6px 12px rgb(0 0 0 / 22%);
+		height: 100%;
+
+	}
+	.sticky {
+		position: sticky!important;
+		position: -webkit-sticky!important;
+		top: 80px;
+	}
+	/* .col-content2-right-a11yFix{
+		position: sticky!important;
+		position: -webkit-sticky!important;
+		top: 1rem
+	} */
+	
+	.ds-row{
+		padding-right: 30px;
+	}
+	
+	.btn-ungtuyenngay{
+		margin-top: -5px;
+		font-size: 16px;
+		border-radius: 10px;
+		background-color: #000;
+	}
+	.img-ungtuyenngay{
+		margin-top: -5px;
+	}
+	.btn-ungtuyenngay:hover{
+		box-shadow: inset 0 0.0625rem 0.25rem rgb(0 0 0 / 10%);
+	}
+	.btn-luuyeu-thich:hover .img-ungtuyenngay path{
+		fill: red;
+	}
+	.btn-luuyeu-thich{
+		border: none;
+		background: none;
+		outline: none;
+	}
+	.col-content2-left{
+		cursor: pointer;
+	}
+	.col-content2-right-above{
+		border-bottom:  2px solid rgba(0,0,0,.125);
+		box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+	.col-motacongviecdaydu{
+		height: calc(100vh - 244px);
+        overflow-y:auto;
+	}
+	.format-col-basicInfo{
+		height: 500px;
+        overflow-y:auto;
+	}
+	.col-motacongviecdaydu::-webkit-scrollbar, .col-content2-left::-webkit-scrollbar, .format-col-basicInfo::-webkit-scrollbar{ 
+		width: 0 !important;
+		display: none; 
+	}
+	.col-thongtintuyendung
+	{
+		padding-top: 0.5em;
+		border-top:  2px solid rgba(0,0,0,.125);
+	}
+	.ul-motacongviec, .ul-quyenloiduochuong, .ul-yeucaucongviec{
+		display: block;
+		list-style-type: disc;
+		margin-top: 0.5em;
+		margin-bottom: 1em;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 50px;
+	}
+	.format-text-bold{
+		font-weight: bold;
+		display: inline-block;
+	}
+	.p-chucvu,.p-nganhnghe, .p-yeucaubangcap{
+		display: inline-block;
+		margin-left: 5px;
+	}
+	.p-tuyendung1,.p-tuyendung2{
+		margin-left: 8px;
+		margin-bottom: 5px;
+	}
+	.card-motacongviecdaydu, .card-mota{
+		border: none;
+	}
+	.card-motacongviecdaydu{
+		padding-top: 1rem!important;
+	}
+	.mgl-col-content2-right-below{
+		padding-left: 30px;
+	}
+	.col-img-user, .col-img-time{
+		display: flex;
+	}
+	.col-img-user svg, .col-img-time svg{
+		margin-top: 6px;
+	}
+
+
+/* css for userlogin */
+	.format-img-userxinviec{
+		width: 60px;
+		height: 50px;
+		margin-right: 20px;
+	}
+
+	.format-img-userxinviec-right{
+		width: 110px;
+		height: 110px;
+		margin-bottom: 15px;
+		margin-top: 20px;
+	}
+
+	.infor-userxinviec{
+		text-align: center;
+		align-items: center;
+		width: 100%;
+		border-bottom: none;
+		box-shadow: none;
+		background: linear-gradient(to top , #fff 50%, #000 50%);
+		height: 250px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+	.card-info-userxinviec{
+		border-bottom: 1px solid #ccc;
+		height: 100%;
+		margin:  0 20px;
+	}
+	.format-img-cake, .format-img-gender{
+		width: 20px;
+		height: 20px;
+		margin-bottom: 8px;
+		margin-right: 10px;
+	}
+
+	.card-basicinfo{
+		margin: 0 10px;
+	}
+	.card-muctieu{
+		margin-left: 10px;
+	}
+	.format-img-call, .format-img-letter{
+		width: 22px;
+		height: 18px;
+		margin-bottom: 8px;
+		margin-right: 10px;
+	}
+
+	.format-mt-item{
+		margin-top: 14px;
+	}
+	
+	.format-img-place{
+		width: 18px;
+		height: 18px;
+		margin-right: 10px;
+	}
+	.format-span-img-cake, .format-span-img-gender, .format-span-img-letter, .format-span-img-call{
+		display: inline-block;
+	}
+	.format-span-img-cake{
+		margin-right: 100px;
+	}
+	.format-span-img-call{
+		margin-right: 90px;
+	}
+	.col-muctieu{
+		margin-top: 30px;
+	}
+	.col-tuyenngay{
+		margin-top: 10px;
+		text-align: center;
+		align-items: center;
+		margin-bottom: 20px;
+	}	
+	.btn-tuyenngay{
+		margin-top: -5px;
+		font-size: 16px;
+		border-radius: 10px;
+		background-color: #000;
+	}
+	.col-basicinfo{
+		height: calc(100vh - 344px);
+	}

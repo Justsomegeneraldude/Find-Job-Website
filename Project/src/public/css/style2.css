@@ -1,0 +1,69 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: Calibri;
+	font-size: 18px;	
+}
+h1{
+    font-size: 2.1rem;	
+    font-weight: bold;
+}
+.mb-5, .my-5 {
+    margin-bottom: 1rem!important;
+}
+.bg {
+    background: #FAF9F8;
+    width: 100%;
+	height: auto;
+}
+.row-container {
+    background: white;
+	border: #707070 solid 1px ;
+	border-radius: 5px;
+
+}
+
+/* #content button{
+    margin: 10px 0 0 0;
+    width: 50%;
+    height: 40px;
+    color:white;
+    font-size: 1.2rem;
+    border: none;
+    background: black;
+    border-radius: 4px;
+    } */
+
+label {
+    font-weight: bold;
+}
+.form-control {
+    background-color: #FAF9F8 !important; 
+}
+
+
+.material-icons{
+    font-size: 40px;
+    color: gray;
+}
+.tag-input .tag-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+} 
+.tag-input .tag-list .item{
+    font-size: 0.8rem;
+    padding: 0px 5px;
+    background: #fff;
+    border: 1.5px solid #888;
+    border-radius: 3px;
+    color: #111;
+    user-select: none;
+}  
+/* .tag-input .tag-list .item . delete-btn{
+    display: inline-block ;
+    margin: 5px 2px;
+    width: 8px;
+    text-align: center;
+    color: #555;
+}    */

@@ -1,0 +1,79 @@
+#content{
+    width: 100%;
+}
+.table-responsive{
+    border-radius: 8px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+.rounded-circle{
+    width: 40px;
+    height: 34px;
+    margin-left: 20px;
+}
+.col-ungviendaduyet{
+    margin-bottom: 50px;
+}
+.format-text-heading{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.format-text-heading h4{
+    font-weight: 600;
+}
+.format-thead-background{
+    background-color: #000;
+    color: #ccc;
+}
+.format-img-done, .format-img-clear{
+    width: 24px;
+    height: 24px;
+
+}
+.format-btn-dongy, .format-btn-tuchoi{
+    display: inline-block;
+    margin: 0 20px;
+}
+.format-td-hoso, .format-td-baidang{
+    display: inline-block;
+    margin: 0 10px
+}
+.format-text{
+    text-align: center;
+}
+.format-hoso, .format-baidang{
+    color:black
+}
+.btn-dongy, .btn-tuchoi{
+    border: none;
+    border-radius: 100%;
+    background-color: #fff;
+    min-height: 40px;
+    min-width: 40px;
+}
+
+.btn-dongy:hover{
+    background-color: #00FF33;
+}
+.btn-tuchoi:hover{
+    background-color: #EE0000;
+}
+.btn-dongy:hover .format-img-done{
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+}
+.btn-tuchoi:hover .format-img-clear{
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+}
+
+.format-text-dadongy{
+    color:#00EE00;
+    font-weight: 600;
+}
+.format-text-datuchoi{
+    color: #EE0000;
+    font-weight: 600;
+}
+

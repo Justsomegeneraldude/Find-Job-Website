@@ -1,0 +1,73 @@
+.header{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 250px;
+    background-image: url('../img/homepage_background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 20% 20%;
+    transition: ease-in-out 0.3s;
+}
+#content2{
+    position: relative;
+    z-index: 2;
+}
+.header:hover{
+    cursor: pointer;
+    opacity: 0.93;
+}
+.format-col-info{
+    display: flex;
+    margin: -20px 20px;
+    z-index: 1000;
+}
+.col-img{
+    background-color: #fff;
+    border-radius: 100%;
+    padding: 10px 10px;
+    /* border:1px solid rgb(129, 129, 129); */
+}
+#avatarInfo{
+    border-radius: 100%;
+    border:1px solid rgb(129, 129, 129);
+}
+#avatarInfo:hover{
+    filter: blur(1px);
+}
+#avatarInfo img{
+    border-radius: 100%;
+    border:1px solid rgb(129, 129, 129);
+}
+
+.format-nameComapy{
+    font-weight: 500;
+    margin: auto;
+    margin-left: 16px;
+    font-size: 30px;
+}
+.format-img-company{
+    width: 80px;
+    height: 80px;
+}
+.format-col-option
+{   
+    margin-top: 40px;
+    /* margin-bottom: 10px; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+.format-text{
+    text-decoration: none;
+    color: #000;
+    margin-right: 100px;
+    margin-top: 20px;
+    font-size: 19px;
+}
+hr{
+    margin-top: 0rem;
+    margin-bottom: 3rem;
+    border: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}

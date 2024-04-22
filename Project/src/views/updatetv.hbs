@@ -1,0 +1,129 @@
+<div id="content" class="container-fluid bg">
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-sm-10 row-container my-5">
+            <form id="form" method="post" action ="/tv/update/{{userTV._id}}?_method=PUT" class="needs-validation my-4" novalidate>
+                <h1 class="text-center">Cập nhật thông tin người xin việc</h1>
+                <div class="d-sm-flex  flex-sm-row mt-4">
+                    <div class="form-group col-sm-7">
+                        <label for="name">Tên người xin việc</label>
+                        <input value={{userTV.hoten}} name="hoten" type="text" class="form-control py-3" id="name" placeholder="Nhập họ tên ở đây" required>
+                    </div>
+                    <div class="form-group col-sm-5">
+                        <label for="namework">Công việc</label>
+                        <input name="congviec" type="text" class="form-control py-3" id="namework" placeholder="Nhập tên công việc ở đây" required value={{userTV.congviec}}>
+                    </div>
+
+                </div>
+                <div class="d-sm-flex flex-sm-row">
+
+                    <div class="form-group col-sm-2">
+                        <label for="ns">Ngày sinh</label>
+                        <input name="ngaysinh" type="date" class="form-control py-3" id="ns" placeholder="Nhập chức vụ ở đây" required value={{userTV.ngaysinh}}>
+                    </div>
+                    <div class="form-group col-sm-2">
+                        <label for="gt">Giới tính</label>
+                        <select name="gioitinh" class="form-control" id="gt" required>
+                            <option>{{userTV.gioitinh}}</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="loaicv">Loại công việc</label>
+                        <select name="loaicongviec" class="form-control" id="loaicv" required>
+                            <option>{{userTV.loaicongviec}}</option>
+                            <option value="Toàn thời gian">Toàn thời gian</option>
+                            <option value="Bán thời gian">Bán thời gian</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="linhvuc">Lĩnh vực</label>
+                        <select name="linhvuc" class="form-control" id="linhvuc">
+                            <option selected>{{userTV.linhvuc}}</option>
+                            <option value="Công nghệ thông tin">Công nghệ thông tin</option>
+                            <option value="Viễn thông">Viễn thông</option>
+                            <option value="Marketing / Truyền thông / Quảng cáo">Marketing / Truyền thông / Quảng cáo</option>
+                            <option value="Nhà hàng / Khách sạn">Nhà hàng / Khách sạn</option>
+                            <option value="Thời trang">Thời trang</option>
+                            <option value="Internet / Online">Internet / Online</option>
+                            <option value="Bất động sản<">Bất động sản</option>
+                            <option value="Dược phẩm / Y tế / Công nghệ sinh học">Dược phẩm / Y tế / Công nghệ sinh học</option>
+                            <option value="Kế toán / Kiểm toán">Kế toán / Kiểm toán</option>
+                            <option value="Kinh doanh">Kinh doanh</option>
+                            <option value="Giải trí">Giải trí</option>
+                            <option value="Khác">Khác</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="d-sm-flex flex-sm-row">
+                    <div class="form-group col-sm-6">
+                        <label for="number">Số điện thoại</label>
+                        <input value={{userTV.sdt}} name="sdt" type="number" class="form-control py-3" id="number" placeholder="Nhập tên số điện thoại ở đây" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="email">Email</label>
+                        <input value={{userTV.email}} name="email" type="email" class="form-control py-3" id="email" placeholder="Nhập tên email ở đây" required>
+                    </div>
+                </div>
+                <div class="d-sm-flex flex-sm-row">
+                    <div class="form-group col-sm-5">
+                        <label for="tp">Thành phố</label>
+                        <select name="city" class="form-control" id="tp" required>
+                            <option disabled="disabled">Tỉnh / Thành phố</option>
+                            <option selected>{{userTV.city}}</option>
+                        </select>
+                        <input class="billing_address_1" name="" type="hidden" value="">
+
+                    </div>
+                    <div class="form-group col-sm-7">
+                        <label for="diachi">Địa chỉ</label>
+                        <input value={{userTV.diachi}} name="diachi" type="text" class="form-control py-3" id="diachi" placeholder="Nhập tên địa chỉ ở đây" required>
+                    </div>
+                </div>
+                <div class="form-group col-12">
+                    <label for="comment1">Mục tiêu nghề nghiệp</label>
+                    <textarea name="muctieunghenghiep" class="form-control" rows="3" id="comment1" placeholder="Nhập mô tả ở đây">{{userTV.muctieunghenghiep}}</textarea>
+                </div>
+                <div class="form-group col-12">
+                    <label for="comment2">Học vấn</label>
+                    <textarea name="hocvan" class="form-control" rows="3" id="comment2" placeholder="Nhập mô tả ở đây">{{userTV.hocvan}}</textarea>
+                </div>
+                {{!-- <div class="form-group col-12">
+                    <label for="comment3">Kỹ năng</label>
+                    <textarea name="kinang" class="form-control" rows="3" id="comment3" placeholder="Nhập mô tả ở đây"></textarea>
+                </div> --}}
+                <div class="form-group col-12">
+                    <label for="comment4">Kinh nghiệm làm việc</label>
+                    <textarea name="kinhnghiemlamviec" class="form-control" rows="3" id="comment4" placeholder="Nhập mô tả ở đây">{{userTV.kinhnghiemlamviec}}</textarea>
+                </div>
+                <div class="form-group col-12">
+                    <label for="comment5">Chi tiết</label>
+                    <textarea name="chitiet" class="form-control" rows="3" id="comment5" placeholder="Nhập mô tả ở đây">{{userTV.chitiet}}</textarea>
+                </div>
+
+                <div class="tag-input form-group col-7">
+                    <div class="input">
+                        <label for="tag-ip">Thêm tag kĩ năng</label>
+                        <div class="d-flex flex-row">
+                            <input class="form-control mt-2" type="text" id="tag-ip" placeholder="Hãy có ít nhất 2 kĩ năng">
+                            <span class="material-icons btn" value="" style="color:gray; font-size: 36px">
+                                add_circle_outline
+                            </span>
+                        </div>
+                    </div>
+                    {{#each userTV.skills}}
+                     <div class="tag-list">{{this}}</div>
+                    {{/each}}
+                </div>
+                <input id="skills" type="hidden" name="skills" value={{userTV.skills}}>
+                 <div class="offset-4">
+                    <button class="btn-update" onMouseOver="this.style.background='rgb(55 55 55)'"
+                        onMouseOut="this.style.background='rgba(0, 0, 0, 0.1)'" type="submit" class="mx-auto">Cập nhật
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- api để lấy dữ liệu tỉnh của việt nam -->
+<script src='https://cdn.jsdelivr.net/gh/vietblogdao/js/districts.min.js'></script>

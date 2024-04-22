@@ -1,0 +1,41 @@
+<style>
+    .format-nav {
+        background-color: black !important;
+    }
+
+    #navbar-content {
+        position: sticky;
+    }
+
+    .delete-btn:hover {
+        cursor: pointer;
+    }
+</style>
+<div class="header">
+</div>
+<div id="content2">
+    <div class="container">
+        {{#with infoDoanhNghiep}}
+        <div class="format-col-info">
+            <div class="col-img">
+                <button title="Thay ảnh đại diện" id="avatarInfo" type="button" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" style="border:none;background-color: transparent;">
+                    <span><img class="format-img-company" alt="" src={{this.logo}}></span>
+                </button>
+            </div>
+            <h4 class="format-nameComapy">{{this.tendoanhnghiep}}</h4>
+        </div>
+        {{/with}}
+
+        <div id="navAdmin" class="format-col-option nav nav-tabs" style="border:none;">
+            <a onclick="vieclam()" class="format-text nav-link active getUser" href="#">Việc làm</a>
+            <a onclick="Gioithieu()" class="format-text nav-link getDescription" id={{getUser.id}} href="#">Giới thiệu công ty</a>
+            <!-- <a class="format-text nav-link" href="#">Ảnh</a> -->
+            <a onclick="Phucloi()" class="format-text nav-link getBenefit" id={{getUser.id}} href="#">Phúc lợi</a>
+            <!-- <a class="format-text nav-link" href="#">Chỉnh sửa thông tin</a> -->
+        </div>
+        <hr>
+
+    </div>
+</div>
+{{> content3}}

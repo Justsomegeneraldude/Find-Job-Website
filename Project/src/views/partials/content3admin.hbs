@@ -1,0 +1,187 @@
+{{#if message}}
+<div id="handle-error" class="awn-toast-container">
+    <div class="awn-toast-wrapper"><b class="awn-toast-label">THÔNG BÁO</b>
+      <div class="awn-toast-content">{{message}}</div>
+    </div>
+</div>
+{{/if}}
+
+{{#if success}}
+<div id="handle-error" class="awn-toast-container1">
+    <div class="awn-toast-wrapper1"><b class="awn-toast-label1">THÔNG BÁO</b>
+      <div class="awn-toast-content1">{{success}}</div>
+    </div>
+</div>
+{{/if}}
+<div class="content-2" id="content-2">
+	<div class="container container-content-2" style="margin-top:30px;">
+		<div class="row">
+			<div class="col-sm-12 col-md-7 col-lg-6 col-xl-5 col-content2-left">
+				<div class="row">
+					{{#each userTV}}
+					<div class="ds-row getUserTVID" id={{this._id}}>
+						<div class="col-sm-12 col-mg-content-2-left-main">
+							<div class="col-sm-12 col-mg-content-2-left-main">
+								<div class="card card-format-border-left" id="">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-sm-12 col-img-text">
+												<div class="col-img">
+													<span></span>
+													<image class="img-company" width="60" height="50"
+														src="/img/18-F3.png" />
+													</span>
+												</div>
+												<div class="col-text">
+													<h5 class="card-title format-text-bold">{{this.hoten}}</h5>
+													<h6 class="card-subtitle mb-2">{{this.congviec}}</h6>
+												</div>
+											</div>
+											<div class="col-sm-12">
+												<div class="col-time">
+													<span><img class="img-time" src="/img/time.jpg" alt=""></span>
+													<span class="card-text p-time">
+														{{this.loaicongviec}}</span>
+												</div>
+											</div>
+											<div class="col-sm-12">
+												{{#each this.skills}}
+												<p class="card-text p-request">{{this}}</p>
+												{{/each}}
+											</div>
+											<div class="col-sm-8 col-diadiem">
+												<span><i class="fa fa-map-marker" aria-hidden="true"></i><span>
+												<span class="card-text p-diadiem">{{this.city}}</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+			<div class="d-none d-md-block col-md-5 col-lg-6 col-xl-7 col-content2-right col-content2-right-a11yFix" id="col-centent2-right-scroll">
+				<div id="contentDetail" class="row">
+					<div id="content" class="container container-pageinfouser">
+						<div class="col-content-pageinfouser">
+							<div class="row ds-row-pageinfouser">
+								{{#with userTVDetail}}
+								<div class="col-sm-12 infor-userxinviec col-pageinfouserabove">
+									<div class="card-info-userxinviec">
+										<div class="body">
+											<div class="row">
+												<div class="col-sm-12 img-userxinviec-right">
+													<button title="Thay ảnh đại diện" id="avatarInfo" type="button" data-bs-toggle="modal"
+														data-bs-target="#exampleModal" style="border:none;background-color: transparent;">
+														<span><img style="border-radius:100%; margin-top:30px" src="/img/18-F3.png" class="format-img-userxinviec-right" alt="Đây là avatar người tìm việc"></span>
+													</button>
+												</div>
+												<div class="col-sm-12">
+													<h5 class="card-title format-text-bold">{{hoten}}</h5>
+													<h6 class="card-subtitle mb-2">{{congviec}}</h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12 format-col-basicInfo">
+									<div class="card-basicinfo">
+										<div class="body">
+											<div class="row">
+												<div class="col-sm-12 mgl-col-content2-right-below">
+													<h5 class="card-title format-text-bold">Thông tin cơ bản</h5>
+												</div>
+												<div class="col-sm-12 mgl-col-content2-right-below format-mt-item">
+													<span class="format-span-img-cake"><img class="format-img-cake" src="/img/ic_cake_24px.png"
+															alt="">{{ngaysinh}}</span>
+													<span class="format-span-img-gender"><img class="format-img-gender"
+															src="/img/ic_wc_24px.png" alt="">{{gioitinh}}</span>
+												</div>
+						
+												<div class="col-sm-12  mgl-col-content2-right-below format-mt-item">
+													<span class="format-span-img-call"><img class="format-img-call" src="/img/ic_call_24px.png"
+															alt="">{{sdt}}</span>
+													<span class="format-span-img-letter"><img class="format-img-letter"
+															src="/img/ic_markunread_24px.png" alt="">{{email}}</span>
+												</div>
+						
+												<div class="col-sm-12  mgl-col-content2-right-below format-mt-item">
+													<span><img class="format-img-place" src="/img/ic_place_24px.png" alt="">{{diachi}}</span>
+												</div>
+						
+												<div class="col-sm-12 mgl-col-content2-right-below col-muctieu">
+													<h5 class="card-title format-text-bold">Mục tiêu nghề nghiệp</h5>
+													<span>
+														<p class="p-muctieu">{{muctieunghenghiep}} </p>
+													</span>
+												</div>
+						
+												<div class="col-sm-12 mgl-col-content2-right-below col-hocvan">
+													<h5 class="card-title format-text-bold">Học vấn</h5>
+													<span>
+														<p class="p-hocvan">
+															{{hocvan}}
+														</p>
+													</span>
+												</div>
+						
+												<div class="col-sm-12 mgl-col-content2-right-below col-kynang">
+													<h5 class="card-title format-text-bold">Kỹ năng</h5>
+													<span>
+														{{#each skills}}
+														<p class="p-kynang">
+															{{this}}
+														</p>
+														{{/each}}
+													</span>
+												</div>
+												<div class="col-sm-12 mgl-col-content2-right-below col-kinhnghiem">
+													<h5 class="card-title format-text-bold">Kinh nghiệm làm việc</h5>
+													<span>
+														<p class="p-kinhnghiem">
+															{{kinhnghiemlamviec}}
+														</p>
+													</span>
+												</div>
+												<div class="col-sm-12 mgl-col-content2-right-below col-chitiet">
+													<h5 class="card-title format-text-bold">Chi tiết</h5>
+													<span>
+														<p class="p-chitiet">
+															{{chitiet}}
+														</p>
+													</span>
+												</div>
+												
+												<div class="col-md-12 col-tuyenngay">
+													<a class="btn btn-dark btn-outline-light btn-tuyenngay" tabindex="-1" role="button"
+														href="/dn/invite/{{_id}}">Ứng tuyển ngay</a>
+													<button class="btn-luuyeu-thich" id="btn-luuyeuthich" aria-haspopup="true"
+														aria-expanded="false">
+														<span>
+															<svg class="img-ungtuyenngay" width="50" height="40" role="img"
+																aria-label="biểu tượng-lưu" focusable="false" viewBox="0 0 18 18">
+																<g>
+																	<path
+																		d="M12.38,2.25A4.49,4.49,0,0,0,9,3.82,4.49,4.49,0,0,0,5.63,2.25,4.08,4.08,0,0,0,1.5,6.38c0,2.83,2.55,5.15,6.41,8.66L9,16l1.09-1C14,11.52,16.5,9.21,16.5,6.38A4.08,4.08,0,0,0,12.38,2.25ZM9.08,13.91L9,14l-0.08-.08C5.35,10.68,3,8.54,3,6.38A2.56,2.56,0,0,1,5.63,3.75,2.93,2.93,0,0,1,8.3,5.52H9.7a2.91,2.91,0,0,1,2.67-1.77A2.56,2.56,0,0,1,15,6.38C15,8.54,12.65,10.68,9.08,13.91Z">
+																	</path>
+																</g>
+															</svg>
+														</span>
+													</button>
+												</div>
+											
+											</div>
+										</div>
+									</div>
+								</div>
+								{{/with}}
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

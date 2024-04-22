@@ -1,0 +1,15 @@
+	/* css footer */
+	#footer{
+		margin-top: 80px;
+		height: 110px;
+		background-color: #000;
+	}
+	.container-footer{
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.h5-footer{
+		font-weight: bold;
+		color: #fff;
+		line-height: 110px;
+	}

@@ -1,0 +1,103 @@
+@media (max-width: 991.98px){
+	.nav-link{
+		text-align: center;
+	}
+    .item-dangky{
+        border: none;
+    }
+    .navbar-collapse li{
+        margin-left: 0px;
+    }
+    #btn-menu:hover{
+        background-color: #FFAEB9;
+        color: #fff;   
+    }
+    .col-ungtuyenngay{
+        margin-top: 10px;
+    }
+    .p-money, .p-time, .p-time, .p-request, .p-diadiem{
+        font-size: 17px;
+    }
+}
+@media (max-width: 575.98px){
+    *{
+        font-size: 15px;
+    }
+  
+    .brand{
+        font-size: 65px;
+    }
+    .tieu-chi{
+        font-size: 35px;
+    }
+    .btn-timviec{
+        width: 100%;
+        font-size: 16px;
+    }
+    .btn-khamphathem{
+        font-size: 17px;
+        height: 45px;
+        line-height: 45px;
+    }
+    .form-container .fa-search, .form-container .fa-map-marker{
+        font-size: 16px;
+    }
+    .filter-dropdown,
+    .filter-dropdown-icon {
+    margin: 0 -5px 0 0;
+    padding: 0 12px 0 0;
+    }
+    .ds-row{
+        padding-right: 11.250px;
+   }
+   .filter-dropdown, .filter-dropdown-icon {
+       margin: 0 10px 0 0;
+       padding: 0 10px 0 0;
+   }
+   .btn-filter-dropdown, .filter-dropdown-icon .btn-filter-dropdown{
+       height: 38px;
+   }   
+   .filter-dropdown-icon svg{
+       height: 38px;
+       width: 38px;
+   }
+   .col-footer .h5-footer{
+    font-size: 17px;
+    }
+    .format-text-bold{
+        font-size: 18px;
+    }
+    .p-request{
+        font-size: 16px;
+    }
+    #footer{
+        height: 90px;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px){
+    *{
+        font-size: 16px;
+    }
+    .ds-row{
+         padding-right: 11.250px;
+    }
+    .filter-dropdown, .filter-dropdown-icon {
+        margin: 0 10px 0 0;
+        padding: 0 12px 0 0;
+    }   
+    .col-footer .h5-footer{
+        font-size: 17px;
+    }
+    .format-text-bold{
+        font-size: 18px;
+    }
+    .p-request{
+        font-size: 16px;
+    }
+    #footer{
+        height: 100px;
+    }
+
+}

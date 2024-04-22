@@ -1,0 +1,87 @@
+/* các css mới tử backender thêm */
+.content-1{
+	height:100vh;
+}
+.btn-timviec:hover a{
+	color:black !important;
+}
+/* các css cũ */
+.mask{
+   background-color: rgba(0, 0, 0, 0.85); 
+   height: 100%
+}
+.brand{
+	font-family: 'Ink Free', sans-serif;
+	height: 155px;
+	font-size: 100px;
+	line-height: 155px;
+}
+.tieu-chi{
+	font-family: 'Ink Free', sans-serif;
+	height: 62px;
+	font-size: 40px;
+	line-height: 62px;
+	margin-top: -35px;
+}
+.search-content{
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+} 
+.mg-brand{
+	margin-top: 50px;
+}
+.mg-search-form{
+	margin: 40px 0px;
+	padding: 0px 30px;
+}
+.search-input:focus, .btn-timviec:focus{
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.btn-timviec{
+	background-color: #000;
+	width: 120px;
+
+}
+.btn-khamphathem{
+	background-color: #000;
+	text-transform: uppercase;
+	height: 55px;
+	font-size: 19px;
+	padding: 0 30px;
+	line-height: 55px;
+	
+}
+#myInput, #myInput1{
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.text-tiemkiem, .text-diadiem{
+	background-color: #fff;
+	color: black;
+	font-weight: bold;
+	border-radius: 7px;
+}
+.form-container{
+	position: relative;
+}
+.form-container .fa-search, .form-container .fa-map-marker{
+	position: absolute;
+	right: 10px;
+    top: 10px;
+	color: black;
+	font-size: 20px;
+}
+
+.inline-search-form{
+	position: relative;
+}
+
+.bg-image{
+	background-image: url("../img/homepage_background.jpg");
+}

@@ -1,0 +1,13 @@
+.col-content-pageinfouser{  
+    border-radius: 10px;
+    padding-bottom: 30px;
+    padding-top: 60px;
+}
+.ds-row-pageinfouser{
+    box-shadow: 6px 6px 12px rgb(0 0 0 / 22%);
+    padding-right: 0px;
+   border-radius: 2px; 
+}
+.col-pageinfouserabove{
+    border-radius: 2px;
+}
